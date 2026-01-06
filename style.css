@@ -234,3 +234,21 @@ h1 {
 
 
 
+/* SECOND SECTION BAG – INITIAL STATE */
+.section-two-image .tilt-img {
+  height: 520px;
+  transform: rotate(0deg) translateY(0);
+  transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* 360 ROTATION */
+.section-two-image .tilt-img.spin {
+  transform: rotate(360deg) translateY(0);
+}
+
+/* AFTER ROTATION – SLOW DRIFT */
+.section-two-image .tilt-img.drift {
+  transform: rotate(360deg) translateY(40px);
+  transition: transform 2.5s ease-out;
+}
