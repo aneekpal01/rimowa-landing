@@ -220,11 +220,17 @@ h1 {
 
 .section-two-image .tilt-img {
   height: 520px;
-  transform: rotate(-12deg);
-  opacity: 0.95;
+  transform: rotate(0deg);
+  opacity: 1;
+  position: relative;
+  bottom: -20px; /* ground feel */
 }
 
 
+
+.section-two-image .tilt-img {
+  filter: drop-shadow(0 40px 60px rgba(0,0,0,0.6));
+}
 
 
 
