@@ -76,11 +76,10 @@
 </section>
 
   
+
 <script>
   const mainImg = document.querySelector(".main-img");
-  const tiltImgSecond = document.querySelector(".section-two .tilt-img");
-
-  let hasTurned = false;
+  const secondImg = document.querySelector(".section-two .tilt-img");
 
   window.addEventListener("load", () => {
     document.body.classList.add("loaded");
@@ -89,24 +88,19 @@
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
-    /* HERO IMAGE – SOFT PARALLAX */
+    /* HERO BAG */
     if (mainImg) {
       mainImg.style.transform =
-        `translateY(calc(-50% + ${scrollY * 0.04}px))`;
+        `translateY(calc(-50% + ${scrollY * 0.05}px))`;
     }
 
-    /* PAGE-2 – LUXURY MICRO TURN */
-    if (tiltImgSecond && !hasTurned) {
-      const rect = tiltImgSecond.getBoundingClientRect();
-
-      if (rect.top < window.innerHeight * 0.7) {
-        hasTurned = true;
-        tiltImgSecond.classList.add("turn");
-      }
+    /* SECOND BAG – SAME MOTION (SLIGHTLY LESS) */
+    if (secondImg) {
+      secondImg.style.transform =
+        `translateY(${scrollY * 0.03}px)`;
     }
   });
 </script>
-
 
 
 
