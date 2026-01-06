@@ -245,3 +245,14 @@ html, body {
 
 
 
+.section-two-image {
+  position: relative;
+}
+
+.section-two-image .tilt-img {
+  position: relative;      /* 🔑 absolute hata diya */
+  top: auto;
+  right: auto;
+  left: auto;
+  transform: translateY(0); /* hero wala transform cancel */
+}
