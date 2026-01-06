@@ -80,34 +80,33 @@
   const mainImg = document.querySelector(".main-img");
   const tiltImgSecond = document.querySelector(".section-two .tilt-img");
 
-  let hasSpun = false;
+  let hasTurned = false;
 
-  // PAGE LOAD
   window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
 
-  // SCROLL HANDLER
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
-    /* HERO IMAGE PARALLAX */
+    /* HERO IMAGE – SOFT PARALLAX */
     if (mainImg) {
       mainImg.style.transform =
-        `translateY(calc(-50% + ${scrollY * 0.05}px))`;
+        `translateY(calc(-50% + ${scrollY * 0.04}px))`;
     }
 
-    /* PAGE-2 HORIZONTAL ROTATION (ONE TIME) */
-    if (tiltImgSecond && !hasSpun) {
+    /* PAGE-2 – LUXURY MICRO TURN */
+    if (tiltImgSecond && !hasTurned) {
       const rect = tiltImgSecond.getBoundingClientRect();
 
-      if (rect.top < window.innerHeight * 0.75) {
-        hasSpun = true;
-        tiltImgSecond.classList.add("spin");
+      if (rect.top < window.innerHeight * 0.7) {
+        hasTurned = true;
+        tiltImgSecond.classList.add("turn");
       }
     }
   });
 </script>
+
 
 
 
