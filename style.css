@@ -423,3 +423,30 @@ html, body {
   }
 }
 
+@media (max-width: 768px) {
+
+  .hero {
+    height: auto;          /* 🔑 VERY IMPORTANT */
+    min-height: unset;
+    padding-bottom: 40px;  /* controlled space */
+  }
+
+  .hero-image {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 768px) {
+
+  .section-two {
+    padding: 40px 24px;   /* 80px → 40px */
+    min-height: auto;
+  }
+
+  .section-two-content {
+    margin-bottom: 24px;
+  }
+
+  .section-two-content h2 {
+    margin-bottom: 12px;
+  }
+}
