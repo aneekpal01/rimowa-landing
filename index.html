@@ -75,28 +75,31 @@
   
 <script>
   const mainImg = document.querySelector(".main-img");
-  const tiltImg = document.querySelector(".tilt-img");
+  const tiltImgSecond = document.querySelector(".section-two .tilt-img");
 
-  // PAGE LOAD ANIMATION
+  // PAGE LOAD
   window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
 
-  // SCROLL PARALLAX (SMOOTH & SAFE)
+  // SCROLL ANIMATION
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
+    // HERO IMAGE
     if (mainImg) {
       mainImg.style.transform =
         `translateY(calc(-50% + ${scrollY * 0.05}px))`;
     }
 
-    if (tiltImg) {
-      tiltImg.style.transform =
-        `translateY(calc(-50% + ${scrollY * 0.08}px)) rotate(-12deg)`;
+    // SECOND SECTION IMAGE
+    if (tiltImgSecond) {
+      tiltImgSecond.style.transform =
+        `rotate(-12deg) translateY(${scrollY * 0.04}px)`;
     }
   });
 </script>
+
 
 
   
