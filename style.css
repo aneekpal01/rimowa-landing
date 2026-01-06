@@ -349,7 +349,7 @@ html, body {
   .hero-image {
     width: 100%;
     /* 👇 Pehle 70px tha, ab 110px kar diya taaki bag aur niche aaye */
-    margin-top: 110px;  
+    margin-top: 160px;  
     display: flex;
     justify-content: center;
   }
@@ -357,7 +357,7 @@ html, body {
   /* FIRST BAG STYLING */
   .main-img {
     width: 100%;
-    max-width: 280px;    /* 📏 Standard Size */
+    max-width: 300px;    /* 📏 Standard Size */
     height: auto;
     object-fit: contain;
     margin: 0 auto;
@@ -385,7 +385,7 @@ html, body {
   .section-two-image .tilt-img {
     width: 100%;
     /* 👇 Ye important hai: Size ab First Bag (280px) jitna hi hoga */
-    max-width: 280px;  
+    max-width: 300px;  
     height: auto;
     object-fit: contain;
     margin: 0 auto;
