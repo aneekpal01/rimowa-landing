@@ -450,3 +450,16 @@ html, body {
     margin-bottom: 12px;
   }
 }
+.main-img {
+  margin: 24px auto 0;   /* 🔑 upar se gap */
+}
+.main-img {
+  width: 100%;
+  max-width: 300px;     /* 🔑 size control */
+  max-height: 420px;    /* 🔑 natural proportion */
+  height: auto;
+  object-fit: contain;
+}
+.main-img {
+  filter: drop-shadow(0 24px 40px rgba(0,0,0,0.6));
+}
