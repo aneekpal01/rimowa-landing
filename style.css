@@ -202,3 +202,36 @@ h1 {
 .section-two-image .tilt-img.turn {
   transform: rotateY(22deg);
 }
+
+
+
+.section-two-content {
+  width: 40%;
+  max-width: 520px;   /* 🔑 THIS IS THE KEY */
+}
+
+.section-two-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+
+.section-two-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #cfcfcf;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
