@@ -1,1 +1,123 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0b0b0b;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  letter-spacing: 0.08em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  height: calc(100vh - 120px);
+  padding: 0 80px;
+}
+
+/* LEFT TEXT */
+.hero-text {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.micro {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  margin-bottom: 30px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+
+.meta {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #9a9a9a;
+  margin-bottom: 40px;
+}
+
+/* CTA */
+.cta {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  width: fit-content;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.cta:hover {
+  background-color: #232323;
+}
+
+/* RIGHT IMAGE */
+.hero-image {
+  width: 65%;
+  position: relative;
+}
+
+.main-img {
+  position: absolute;
+  right: 180px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 520px;
+  z-index: 2;
+}
+
+.tilt-img {
+  position: absolute;
+  right: 0;
+  top: 55%;
+  transform: translateY(-50%) rotate(-12deg);
+  height: 520px;
+  opacity: 0.95;
+}
