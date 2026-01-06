@@ -349,7 +349,7 @@ html, body {
   .hero-image {
     width: 100%;
     /* 👇 Pehle 70px tha, ab 110px kar diya taaki bag aur niche aaye */
-    margin-top: 160px;  
+    margin-top: 300px;  
     display: flex;
     justify-content: center;
   }
