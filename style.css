@@ -225,6 +225,9 @@ h1 {
 
 
 
+html, body {
+  overflow-x: hidden;
+}
 
 
 
