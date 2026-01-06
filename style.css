@@ -393,3 +393,43 @@ html, body {
     transform: none;   /* Tilt hata diya mobile ke liye taaki sidha dikhe */
   }
 }
+@media (max-width: 768px) {
+
+  .navbar {
+    display: flex;
+    flex-direction: column;     /* 🔑 logo upar, links niche */
+    align-items: center;
+    padding: 16px 12px;
+    gap: 10px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;            /* 🔑 wrap allowed */
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 11px;            /* 🔑 smaller, luxury */
+    letter-spacing: 0.12em;
+    white-space: nowrap;        /* words break na ho */
+  }
+
+}
+@media (max-width: 768px) {
+
+  .logo {
+    font-size: 20px;
+    letter-spacing: 0.14em;
+  }
+
+}
+/* DEMO MODE – DISABLE ALL LINKS */
+a {
+  pointer-events: none;
+  cursor: default;
+}
