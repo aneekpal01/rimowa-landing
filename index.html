@@ -103,16 +103,17 @@
     const scrollY = window.scrollY;
 
     /* HERO BAG */
-    if (mainImg) {
-      mainImg.style.transform =
-        `translateY(calc(-50% + ${scrollY * 0.05}px))`;
-    }
+    if (window.innerWidth > 768 && mainImg) {
+  mainImg.style.transform =
+    `translateY(calc(-50% + ${scrollY * 0.05}px))`;
+}
+
 
     /* SECOND BAG – SAME MOTION (SLIGHTLY LESS) */
-    if (secondImg) {
-      secondImg.style.transform =
-        `translateY(${scrollY * 0.03}px)`;
-    }
+   if (window.innerWidth > 768 && secondImg) {
+  secondImg.style.transform = `translateY(${scrollY * 0.03}px)`;
+}
+
   });
 </script>
 
