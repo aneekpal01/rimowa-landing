@@ -76,7 +76,6 @@
 </section>
 
   
-
 <script>
   const mainImg = document.querySelector(".main-img");
   const tiltImgSecond = document.querySelector(".section-two .tilt-img");
@@ -98,25 +97,19 @@
         `translateY(calc(-50% + ${scrollY * 0.05}px))`;
     }
 
-    /* PAGE-2 ROTATION LOGIC */
+    /* PAGE-2 HORIZONTAL ROTATION (ONE TIME) */
     if (tiltImgSecond && !hasSpun) {
       const rect = tiltImgSecond.getBoundingClientRect();
 
-      // when bag enters viewport
       if (rect.top < window.innerHeight * 0.75) {
         hasSpun = true;
-
-        // 360 rotation
         tiltImgSecond.classList.add("spin");
-
-        // after rotation, drift down
-        setTimeout(() => {
-          tiltImgSecond.classList.add("drift");
-        }, 1600); // matches spin duration
       }
     }
   });
 </script>
+
+
 
 
 
