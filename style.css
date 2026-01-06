@@ -183,3 +183,49 @@ h1 {
   transform: translateY(-50%) rotate(-12deg);
   transition: all 1.8s ease;
 }
+
+
+
+
+/* SECOND SECTION */
+.section-two {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  background-color: #0b0b0b;
+}
+
+.section-two-content {
+  width: 40%;
+}
+
+.section-two-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+
+.section-two-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #cfcfcf;
+  max-width: 420px;
+}
+
+.section-two-image {
+  width: 60%;
+  position: relative;
+}
+
+.section-two-image .tilt-img {
+  height: 520px;
+  transform: rotate(-12deg);
+  opacity: 0.95;
+}
+
+
+
+
+
