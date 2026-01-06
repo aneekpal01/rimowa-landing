@@ -319,27 +319,17 @@ html, body {
 
 
 
-
 /* =========================
-   MOBILE LAYOUT FIX (UPDATED)
+   MOBILE LAYOUT FIX (FINAL)
    ========================= */
 @media (max-width: 768px) {
 
-  /* NAVBAR ADJUSTMENTS */
-  .navbar {
-    padding: 20px 24px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  /* HERO SECTION */
+  /* --- 1. HERO SECTION FIXES --- */
   .hero {
     flex-direction: column;
     padding: 0 24px;
-    height: auto;        /* Fix height issue */
-    padding-bottom: 60px; /* Bottom space */
+    height: auto;
+    padding-bottom: 80px; /* Thoda aur space bottom mein */
   }
 
   .hero-text {
@@ -347,86 +337,59 @@ html, body {
     padding-top: 60px;
   }
 
-  .hero-text h1 {
-    font-size: 42px;
-    line-height: 1.15;
-  }
-
-  .description {
-    font-size: 14px;
-  }
-
-  /* --- PROBLEM 1 FIX: POSITION --- */
-  .hero-image {
-    width: 100%;
-    margin-top: 70px;  /* ⬆️ Yahan gap badhaya hai (was 24px/40px) */
-    display: flex;     /* Centering ke liye */
-    justify-content: center;
-  }
-
-  /* --- PROBLEM 2 FIX: NATURAL SIZE --- */
-  .main-img {
-    width: 100%;
-    max-width: 280px;    /* 📏 Size thoda control kiya taaki natural lage */
-    height: auto;        /* ✨ Important: Isse image stretch nahi hogi */
-    max-height: unset;   /* Purana restriction hata diya */
-    object-fit: contain;
-    margin: 0 auto;
-    
-    /* Resetting desktop styles */
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
-    
-    /* Shadow enhancement */
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
-  }
-
-  /* PRICE & ACTIONS */
-  .price {
-    font-size: 20px;
-    margin-top: 20px;
-  }
-
+  /* BUTTON AREA - SPACE CONTROL */
   .actions {
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    margin-bottom: 20px; /* Button ke niche thoda sa breathing space */
   }
 
-  .primary-btn,
-  .secondary-btn {
+  /* PROBLEM 1: BAG AUR NICHE AAYEGA */
+  .hero-image {
     width: 100%;
-    text-align: center;
+    /* 👇 Pehle 70px tha, ab 110px kar diya taaki bag aur niche aaye */
+    margin-top: 110px;  
+    display: flex;
+    justify-content: center;
   }
 
-  /* SECTION TWO */
+  /* FIRST BAG STYLING */
+  .main-img {
+    width: 100%;
+    max-width: 280px;    /* 📏 Standard Size */
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+  }
+
+  /* --- 2. SECOND SECTION FIXES --- */
   .section-two {
     flex-direction: column;
-    padding: 40px 24px;
-    min-height: auto;
+    padding: 60px 24px; /* Thoda gap badhaya */
   }
 
   .section-two-content {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
-  
-  .section-two-content h2 {
-    font-size: 32px;
+
+  /* PROBLEM 2: SECOND BAG SIZE SAME AS FIRST */
+  .section-two-image {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center align */
   }
 
   .section-two-image .tilt-img {
     width: 100%;
-    max-width: 280px;
+    /* 👇 Ye important hai: Size ab First Bag (280px) jitna hi hoga */
+    max-width: 280px;  
+    height: auto;
+    object-fit: contain;
     margin: 0 auto;
     display: block;
-    transform: none;
+    transform: none;   /* Tilt hata diya mobile ke liye taaki sidha dikhe */
   }
 }
-
-
-
-
-
