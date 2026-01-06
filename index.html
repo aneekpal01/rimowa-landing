@@ -76,29 +76,44 @@
 </section>
 
   
+
 <script>
   const mainImg = document.querySelector(".main-img");
   const tiltImgSecond = document.querySelector(".section-two .tilt-img");
+
+  let hasSpun = false;
 
   // PAGE LOAD
   window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
 
-  // SCROLL ANIMATION
+  // SCROLL HANDLER
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
-    // HERO IMAGE
+    /* HERO IMAGE PARALLAX */
     if (mainImg) {
       mainImg.style.transform =
         `translateY(calc(-50% + ${scrollY * 0.05}px))`;
     }
 
-    // SECOND SECTION IMAGE
-    if (tiltImgSecond) {
-      tiltImgSecond.style.transform =
-        `rotate(-12deg) translateY(${scrollY * 0.04}px)`;
+    /* PAGE-2 ROTATION LOGIC */
+    if (tiltImgSecond && !hasSpun) {
+      const rect = tiltImgSecond.getBoundingClientRect();
+
+      // when bag enters viewport
+      if (rect.top < window.innerHeight * 0.75) {
+        hasSpun = true;
+
+        // 360 rotation
+        tiltImgSecond.classList.add("spin");
+
+        // after rotation, drift down
+        setTimeout(() => {
+          tiltImgSecond.classList.add("drift");
+        }, 1600); // matches spin duration
+      }
     }
   });
 </script>
