@@ -332,4 +332,101 @@ html, body {
 
 
 
+/* =========================
+   MOBILE LAYOUT FIX
+   ========================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 20px 24px;
+  }
+
+  .nav-links {
+    display: none; /* luxury sites hide menu on mobile */
+  }
+
+  /* HERO SECTION */
+  .hero {
+    flex-direction: column;
+    padding: 0 24px;
+    height: auto;
+  }
+
+  .hero-text {
+    width: 100%;
+    padding-top: 60px;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  /* HERO IMAGE */
+  .hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .main-img {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* PRICE & ACTIONS */
+  .price {
+    font-size: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* SECOND SECTION */
+  .section-two {
+    flex-direction: column;
+    padding: 80px 24px;
+  }
+
+  .section-two-content {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .section-two-content h2 {
+    font-size: 36px;
+  }
+
+  .section-two-image {
+    width: 100%;
+  }
+
+  .section-two-image .tilt-img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    transform: none;
+  }
+}
 
