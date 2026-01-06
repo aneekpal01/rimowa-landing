@@ -57,10 +57,30 @@
   </section>
 
 <script>
+  const mainImg = document.querySelector(".main-img");
+  const tiltImg = document.querySelector(".tilt-img");
+
+  // PAGE LOAD ANIMATION
   window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
+
+  // SCROLL PARALLAX (SMOOTH & SAFE)
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    if (mainImg) {
+      mainImg.style.transform =
+        `translateY(calc(-50% + ${scrollY * 0.05}px))`;
+    }
+
+    if (tiltImg) {
+      tiltImg.style.transform =
+        `translateY(calc(-50% + ${scrollY * 0.08}px)) rotate(-12deg)`;
+    }
+  });
 </script>
+
 
   
 </body>
