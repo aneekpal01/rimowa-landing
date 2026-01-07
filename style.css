@@ -320,116 +320,107 @@ html, body {
 
 
 /* =========================
-   MOBILE LAYOUT FIX (FINAL)
+   MOBILE LAYOUT FIX (CLEAN)
    ========================= */
 @media (max-width: 768px) {
+  
+  /* --- NAVBAR --- */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 12px;
+    gap: 10px;
+  }
+  
+  .logo {
+    font-size: 20px;
+    letter-spacing: 0.14em;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+  }
 
-  /* --- 1. HERO SECTION FIXES --- */
+  /* --- HERO SECTION --- */
   .hero {
     flex-direction: column;
-    padding: 0 24px;
+    padding: 60px 24px 80px;
     height: auto;
-    padding-bottom: 80px; /* Thoda aur space bottom mein */
+    min-height: 100vh;
   }
-
+  
   .hero-text {
     width: 100%;
-    padding-top: 60px;
+    text-align: center;
   }
-
-  /* BUTTON AREA - SPACE CONTROL */
+  
   .actions {
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    margin-bottom: 20px; /* Button ke niche thoda sa breathing space */
+    margin-bottom: 40px;
   }
-
-  /* PROBLEM 1: BAG AUR NICHE AAYEGA */
+  
   .hero-image {
     width: 100%;
-    /* 👇 Pehle 70px tha, ab 110px kar diya taaki bag aur niche aaye */
-    margin-top: 600px;  
+    margin-top: 40px; /* 600px bahut zyada tha */
     display: flex;
     justify-content: center;
   }
-
-  /* FIRST BAG STYLING */
+  
   .main-img {
     width: 100%;
-    max-width: 300px;    /* 📏 Standard Size */
+    max-width: 300px;
     height: auto;
     object-fit: contain;
     margin: 0 auto;
     filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
   }
 
-  /* --- 2. SECOND SECTION FIXES --- */
+  /* --- SECTION TWO --- */
   .section-two {
     flex-direction: column;
-    padding: 60px 24px; /* Thoda gap badhaya */
+    padding: 60px 24px;
   }
-
+  
   .section-two-content {
     width: 100%;
     margin-bottom: 40px;
+    text-align: center;
   }
-
-  /* PROBLEM 2: SECOND BAG SIZE SAME AS FIRST */
+  
   .section-two-image {
     width: 100%;
     display: flex;
-    justify-content: center; /* Center align */
+    justify-content: center;
   }
-
+  
   .section-two-image .tilt-img {
     width: 100%;
-    /* 👇 Ye important hai: Size ab First Bag (280px) jitna hi hoga */
-    max-width: 300px;  
+    max-width: 300px;
     height: auto;
     object-fit: contain;
     margin: 0 auto;
     display: block;
-    transform: none;   /* Tilt hata diya mobile ke liye taaki sidha dikhe */
+    transform: none;
   }
 }
-@media (max-width: 768px) {
 
-  .navbar {
-    display: flex;
-    flex-direction: column;     /* 🔑 logo upar, links niche */
-    align-items: center;
-    padding: 16px 12px;
-    gap: 10px;
-  }
-
-}
-@media (max-width: 768px) {
-
-  .nav-links {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;            /* 🔑 wrap allowed */
-    justify-content: center;
-  }
-
-  .nav-links a {
-    font-size: 11px;            /* 🔑 smaller, luxury */
-    letter-spacing: 0.12em;
-    white-space: nowrap;        /* words break na ho */
-  }
-
-}
-@media (max-width: 768px) {
-
-  .logo {
-    font-size: 20px;
-    letter-spacing: 0.14em;
-  }
-
-}
-/* DEMO MODE – DISABLE ALL LINKS */
-a {
+/* DEMO MODE – Sirf specific links disable karo, sab nahi */
+/* Agar sab links disable karna hai temporarily: */
+/*
+.demo-mode a:not(.nav-links a) {
   pointer-events: none;
   cursor: default;
 }
+*/
