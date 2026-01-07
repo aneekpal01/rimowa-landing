@@ -319,84 +319,296 @@ html, body {
 
 
 
-/* =========================
-   MOBILE LAYOUT FIX (CLEAN)
-   ========================= */
+/* ===========================================
+   🔥 PREMIUM MOBILE EXPERIENCE
+   =========================================== */
+
+/* --- GLOBAL PREMIUM TOUCHES --- */
 @media (max-width: 768px) {
   
-  /* --- NAVBAR --- */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* --- PREMIUM NAVBAR --- */
   .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px 12px;
-    gap: 10px;
+    padding: 20px 16px;
+    gap: 14px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   
   .logo {
-    font-size: 20px;
-    letter-spacing: 0.14em;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    background: linear-gradient(135deg, #fff 0%, #c9a86c 50%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
   
   .nav-links {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
   }
   
   .nav-links a {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 4px 0;
   }
 
-  /* --- HERO SECTION --- */
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a86c, transparent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-links a:hover,
+  .nav-links a:active {
+    color: #c9a86c;
+  }
+
+  .nav-links a:hover::after,
+  .nav-links a:active::after {
+    width: 100%;
+  }
+
+  /* --- PREMIUM HERO SECTION --- */
   .hero {
     flex-direction: column;
-    padding: 60px 24px 80px;
+    padding: 80px 28px 100px;
     height: auto;
     min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport for mobile browsers */
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle grain texture overlay */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
   }
   
   .hero-text {
     width: 100%;
     text-align: center;
+    animation: fadeUp 1s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #e8e8e8 50%, #c9a86c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-text p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.05em;
+    max-width: 320px;
+    margin: 0 auto 30px;
   }
   
+  /* --- PREMIUM BUTTONS --- */
   .actions {
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     width: 100%;
-    margin-bottom: 40px;
+    max-width: 280px;
+    margin: 0 auto 50px;
+    animation: fadeUp 1s ease-out 0.2s backwards;
+  }
+
+  .actions .btn,
+  .actions button,
+  .actions a {
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Primary Button - Filled */
+  .btn-primary,
+  .actions .btn:first-child {
+    background: linear-gradient(135deg, #c9a86c 0%, #a8894d 100%);
+    color: #0a0a0a;
+    border: none;
+    font-weight: 500;
+  }
+
+  .btn-primary::before,
+  .actions .btn:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-primary:active::before,
+  .actions .btn:first-child:active::before {
+    left: 100%;
+  }
+
+  /* Secondary Button - Outline */
+  .btn-secondary,
+  .actions .btn:last-child {
+    background: transparent;
+    color: #c9a86c;
+    border: 1px solid rgba(201, 168, 108, 0.4);
+  }
+
+  .btn-secondary:active,
+  .actions .btn:last-child:active {
+    background: rgba(201, 168, 108, 0.1);
+    border-color: #c9a86c;
   }
   
+  /* --- PREMIUM HERO IMAGE --- */
   .hero-image {
     width: 100%;
-    margin-top: 40px; /* 600px bahut zyada tha */
+    margin-top: 20px;
     display: flex;
     justify-content: center;
+    animation: floatIn 1.2s ease-out 0.4s backwards;
+  }
+
+  @keyframes floatIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
   
   .main-img {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
     height: auto;
     object-fit: contain;
     margin: 0 auto;
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6))
+            drop-shadow(0 10px 20px rgba(201, 168, 108, 0.1));
+    animation: float 6s ease-in-out infinite;
   }
 
-  /* --- SECTION TWO --- */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  /* --- PREMIUM SECTION TWO --- */
   .section-two {
     flex-direction: column;
-    padding: 60px 24px;
+    padding: 80px 28px;
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+    position: relative;
+  }
+
+  /* Decorative line */
+  .section-two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a86c, transparent);
   }
   
   .section-two-content {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
+  }
+
+  .section-two-content h2 {
+    font-size: 26px;
+    font-weight: 200;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .section-two-content p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 300px;
+    margin: 0 auto;
   }
   
   .section-two-image {
@@ -407,20 +619,68 @@ html, body {
   
   .section-two-image .tilt-img {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
     height: auto;
     object-fit: contain;
     margin: 0 auto;
     display: block;
     transform: none;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
+    transition: transform 0.5s ease;
+  }
+
+  /* --- PREMIUM SCROLLBAR (for supported browsers) --- */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #c9a86c, #8a6d3b);
+    border-radius: 2px;
+  }
+
+  /* --- SMOOTH SCROLL --- */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* --- SELECTION COLOR --- */
+  ::selection {
+    background: rgba(201, 168, 108, 0.3);
+    color: #fff;
   }
 }
 
-/* DEMO MODE – Sirf specific links disable karo, sab nahi */
-/* Agar sab links disable karna hai temporarily: */
-/*
-.demo-mode a:not(.nav-links a) {
-  pointer-events: none;
-  cursor: default;
+/* ===========================================
+   📱 EXTRA SMALL DEVICES (iPhone SE, etc.)
+   =========================================== */
+@media (max-width: 375px) {
+  .hero {
+    padding: 60px 20px 80px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .main-img,
+  .section-two-image .tilt-img {
+    max-width: 260px;
+  }
+
+  .actions {
+    max-width: 240px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 9px;
+  }
 }
-*/
