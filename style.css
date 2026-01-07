@@ -556,7 +556,7 @@ h1 em {
 }
 
 /* ===========================================
-   🎯 SECTION TWO - FIXED PLACEMENT
+   🎯 SECTION TWO - PROPER CENTER FIX
    =========================================== */
 .section-two {
   min-height: 100vh;
@@ -565,7 +565,7 @@ h1 em {
   justify-content: space-between;
   padding: 100px 80px;
   position: relative;
-  background: linear-gradient(180deg, #0b0b0b 0%, #111111 50%, #0b0b0b 100%);
+  background: linear-gradient(180deg, #0b0b0b 0%, #0f0f0f 50%, #0b0b0b 100%);
   overflow: hidden;
 }
 
@@ -595,14 +595,14 @@ h1 em {
 .section-two-content {
   width: 45%;
   max-width: 550px;
-  padding-left: 20px;
 }
 
 .section-two-content h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 52px;
   font-weight: 300;
-  letter-spacing: 0.03em;
+  font-style: italic;
+  letter-spacing: 0.02em;
   margin-bottom: 25px;
   line-height: 1.1;
   color: #ffffff;
@@ -612,63 +612,49 @@ h1 em {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  line-height: 2.1;
+  line-height: 2;
   color: rgba(255, 255, 255, 0.45);
   letter-spacing: 0.02em;
 }
 
-/* --- IMAGE CONTAINER FIX --- */
+/* --- IMAGE CONTAINER - CENTERED --- */
 .section-two-image {
   width: 50%;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 600px;
+  position: relative;
 }
 
-/* Decorative ring - CENTERED properly */
+/* Main decorative ring - FIXED */
 .section-two-image::before {
   content: '';
   position: absolute;
+  width: 480px;
+  height: 480px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
-  border: 1px solid rgba(212, 175, 55, 0.12);
-  border-radius: 50%;
   pointer-events: none;
 }
 
-/* Second subtle ring */
-.section-two-image::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 420px;
-  height: 420px;
-  border: 1px solid rgba(212, 175, 55, 0.06);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-/* --- BAG IMAGE FIX --- */
+/* --- BAG IMAGE - CENTERED --- */
 .section-two-image .tilt-img {
   position: relative;
-  height: 550px;
+  height: 520px;
   width: auto;
+  max-width: 100%;
   object-fit: contain;
   transform: none;
   z-index: 2;
-  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.5));
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .section-two-image:hover .tilt-img {
-  transform: translateY(-15px) scale(1.03);
+  transform: translateY(-12px) scale(1.02);
 }
 
 /* ===========================================
