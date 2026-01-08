@@ -2174,11 +2174,28 @@ body.loaded .hero-image {
 }
 
 
+@keyframes luxuryBreath {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.03);
+  }
+}
+
+.section-two-image::before {
+  animation: luxuryBreath 6s ease-in-out infinite;
+}
 
 
 
 
 
+@media (min-width: 1024px) {
+  .section-two-image:hover .tilt-img {
+    transform: translate(-50%, -50%) scale(1.02) rotate(-0.4deg);
+  }
+}
 
 
 
