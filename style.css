@@ -2100,6 +2100,36 @@ body.loaded .hero-image {
 
 
 
+@media (max-width: 768px) {
+
+  /* IMAGE WRAPPER */
+  .section-two-image {
+    width: 100%;
+    min-height: 500px;
+  }
+
+  /* BAG — MOBILE CENTER FIX */
+  .section-two-image .tilt-img {
+    top: 50%;        /* 🔥 RESET */
+    left: 50%;       /* 🔥 RESET */
+
+    height: 360px;   /* mobile-friendly size */
+
+    transform: translate(-50%, -50%);
+  }
+
+  /* CIRCLE — MOBILE CENTER FIX */
+  .section-two-image::before {
+    top: 50%;
+    left: 50%;
+
+    width: 320px;
+    height: 320px;
+
+    transform: translate(-50%, -50%);
+  }
+
+}
 
 
 
