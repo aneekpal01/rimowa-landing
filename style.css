@@ -629,12 +629,12 @@ h1 em {
 .section-two-image .tilt-img {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
 
   height: 520px;
   width: auto;
 
-  transform: translate(-50%, -50%) translateX(-60px); /* 👈 REAL MOVE */
+  transform: translate(-50%, -50%)  
   z-index: 2;
 
   filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.5));
@@ -642,7 +642,7 @@ h1 em {
 }
 
 .section-two-image:hover .tilt-img {
-  transform: translate(-50%, -50%) translateX(-60px) scale(1.02);
+  transform: translate(-50%, -50%) scale(1.02);
 }
 
 /* DECORATIVE CIRCLE */
