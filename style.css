@@ -619,6 +619,7 @@ h1 em {
 /* Parent container */
 .section-two-image {
   position: relative;
+   min-height: 700px;
 }
 
 /* BAG IMAGE */
@@ -632,7 +633,7 @@ h1 em {
   max-width: 100%;
 
   /* 🔥 SAME transform as circle */
-  transform: translate(-400%, -60%);
+  transform: translate(-50%, -50%);
   z-index: 2;
 
   filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.5));
@@ -641,7 +642,7 @@ h1 em {
 
 /* HOVER EFFECT */
 .section-two-image:hover .tilt-img {
-  transform: translate(-400%, -60%) scale(1.02);
+  transform: translate(-50%, -50%) scale(1.02);
 }
 
 /* CIRCLE */
@@ -658,13 +659,13 @@ h1 em {
   left: 50%;
 
   /* 🔥 EXACT same transform */
-  transform: translate(-400%, -60%);
+  transform: translate(-50%, -50%);
   pointer-events: none;
 }
 
 
 .section-two-image:hover .tilt-img {
-  transform: translate(-400%, -60%) scale(1.02);
+  transform: translate(-50%, -50%) scale(1.02);
 }
 
 
