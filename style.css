@@ -643,7 +643,7 @@ h1 em {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 720px;
+  height: 520px;
   width: auto;
   max-width: 100%;
   transform: translate(-60%, -50%);
@@ -653,7 +653,7 @@ h1 em {
     margin-left: -100px;
 }
 .section-two-image:hover .tilt-img {
-  transform: translate(-50%, -55%) scale(1.02);
+  transform: translate(-60%, -55%) scale(1.02);
 }
 
 
