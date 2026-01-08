@@ -2198,4 +2198,53 @@ body.loaded .hero-image {
 }
 
 
+/* Base circle (already hai, ye sirf enhance karega) */
+.section-two-image::before {
+  transition:
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.8s ease;
+}
 
+/* Desktop hover — luxury interaction */
+.section-two-image:hover::before {
+  transform: translate(-50%, -50%) scale(1.08);
+  box-shadow:
+    0 0 60px rgba(212, 175, 55, 0.25),
+    0 0 120px rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.section-two-image .tilt-img {
+  transition:
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.9s ease;
+}
+
+.section-two-image:hover .tilt-img {
+  transform: translate(-50%, -50%)
+             scale(1.03)
+             rotate(-0.6deg)
+             translateY(-6px);
+  filter:
+    drop-shadow(0 50px 100px rgba(0, 0, 0, 0.65));
+}
+
+@media (max-width: 1024px) {
+
+  .section-two-image:active::before {
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow:
+      0 0 60px rgba(212, 175, 55, 0.25),
+      0 0 120px rgba(212, 175, 55, 0.12);
+    border-color: rgba(212, 175, 55, 0.35);
+  }
+
+  .section-two-image:active .tilt-img {
+    transform: translate(-50%, -50%)
+               scale(1.03)
+               rotate(-0.6deg)
+               translateY(-6px);
+  }
+
+}
