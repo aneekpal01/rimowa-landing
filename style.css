@@ -646,14 +646,14 @@ h1 em {
   height: 520px;
   width: auto;
   max-width: 100%;
-  transform: translate(-100%, -50%);
+  transform: translate(-200%, -50%);
   z-index: 2;
   filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.5));
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     margin-left: -100px;
 }
 .section-two-image:hover .tilt-img {
-  transform: translate(-100%, -55%) scale(1.02);
+  transform: translate(-200%, -55%) scale(1.02);
 }
 
 
