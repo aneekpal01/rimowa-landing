@@ -643,7 +643,7 @@ h1 em {
 /* --- BAG IMAGE - CENTERED --- */
 .section-two-image .tilt-img {
   position: relative;
-  height: 520px;
+  height: 320px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
