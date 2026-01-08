@@ -556,8 +556,9 @@ h1 em {
 }
 
 /* ===========================================
-   🎯 SECTION TWO - PROPER CENTER FIX
+   🎯 SECTION TWO - FINAL CENTER FIX
    =========================================== */
+
 .section-two {
   min-height: 100vh;
   display: flex;
@@ -592,6 +593,7 @@ h1 em {
   color: #d4af37;
 }
 
+/* TEXT CONTENT */
 .section-two-content {
   width: 45%;
   max-width: 550px;
@@ -616,10 +618,12 @@ h1 em {
   color: rgba(255, 255, 255, 0.45);
   letter-spacing: 0.02em;
 }
-/* Parent container */
+
+/* IMAGE WRAPPER */
 .section-two-image {
   position: relative;
-   min-height: 700px;
+  width: 45%;
+  min-height: 700px;
 }
 
 /* BAG IMAGE */
@@ -632,7 +636,6 @@ h1 em {
   width: auto;
   max-width: 100%;
 
-  /* 🔥 SAME transform as circle */
   transform: translate(-50%, -50%);
   z-index: 2;
 
@@ -645,28 +648,23 @@ h1 em {
   transform: translate(-50%, -50%) scale(1.02);
 }
 
-/* CIRCLE */
+/* DECORATIVE CIRCLE */
 .section-two-image::before {
   content: '';
   position: absolute;
+  top: 50%;
+  left: 50%;
 
   width: 480px;
   height: 480px;
   border-radius: 50%;
   border: 1px solid rgba(212, 175, 55, 0.15);
 
-  top: 50%;
-  left: 50%;
-
-  /* 🔥 EXACT same transform */
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
 
 
-.section-two-image:hover .tilt-img {
-  transform: translate(-50%, -50%) scale(1.02);
-}
 
 
 /* ===========================================
