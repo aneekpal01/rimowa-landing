@@ -1981,3 +1981,139 @@ body.loaded .hero-image {
 }
 
 
+
+
+
+
+
+
+
+
+/* ===========================================
+   📱 TABLET (1200px)
+   =========================================== */
+@media (max-width: 1200px) {
+  .section-two {
+    flex-direction: column;
+    padding: 80px 50px;
+    text-align: center;
+  }
+
+  .section-two-content {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .section-two-content h2 {
+    font-size: 44px;
+  }
+
+  .section-two-image {
+    width: 100%;
+    min-height: 550px;
+  }
+
+  .section-two-image::before {
+    width: 400px;
+    height: 400px;
+  }
+
+  .section-two-image .tilt-img {
+    height: 450px;
+  }
+}
+
+/* ===========================================
+   📱 MOBILE (768px)
+   =========================================== */
+@media (max-width: 768px) {
+  .section-two {
+    flex-direction: column;
+    padding: 80px 28px;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .section-two-content {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .section-two-content h2 {
+    font-size: 32px;
+  }
+
+  .section-two-content p {
+    font-size: 12px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .section-two-image {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .section-two-image::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .section-two-image .tilt-img {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ===========================================
+   📱 SMALL MOBILE (375px)
+   =========================================== */
+@media (max-width: 375px) {
+  .section-two {
+    padding: 60px 20px;
+  }
+
+  .section-two-content h2 {
+    font-size: 28px;
+  }
+
+  .section-two-content p {
+    font-size: 11px;
+    max-width: 280px;
+  }
+
+  .section-two-image {
+    min-height: 350px;
+  }
+
+  .section-two-image::before {
+    width: 260px;
+    height: 260px;
+  }
+
+  .section-two-image .tilt-img {
+    max-width: 260px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
