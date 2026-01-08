@@ -638,46 +638,20 @@ h1 em {
   pointer-events: none;
 }
 
-/* --- IMAGE CONTAINER --- */
-.section-two-image {
-  width: 50%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 600px;
-}
-
-/* Ring - CENTER */
-.section-two-image::before {
-  content: '';
-  position: absolute;
-  width: 480px;
-  height: 480px;
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-/* --- BAG IMAGE - PERFECTLY CENTERED IN CIRCLE --- */
+/* --- BAG IMAGE - CENTERED --- */
 .section-two-image .tilt-img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  height: 520px;
+  height: 720px;
   width: auto;
   max-width: 100%;
+  transform: translate(-60%, -50%);
   z-index: 2;
   filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.5));
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  
-  /* NO margin-left - pure center */
+    margin-left: -100px;
 }
-
 .section-two-image:hover .tilt-img {
   transform: translate(-50%, -55%) scale(1.02);
 }
