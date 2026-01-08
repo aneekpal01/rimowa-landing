@@ -630,13 +630,13 @@ h1 em {
 .section-two-image .tilt-img {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 200%;
 
   height: 520px;
   width: auto;
   max-width: 100%;
 
-  transform: translate(-50%, -50%);
+  transform: translate(-200%, -50%);
   z-index: 2;
 
   filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.5));
