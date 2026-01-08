@@ -630,7 +630,7 @@ h1 em {
 .section-two-image .tilt-img {
   position: absolute;
   top: 50%;
-  left: 200%;
+  left: 50%;
 
   height: 520px;
   width: auto;
@@ -645,7 +645,7 @@ h1 em {
 
 /* HOVER EFFECT */
 .section-two-image:hover .tilt-img {
-  transform: translate(-50%, -50%) scale(1.02);
+  transform: translate(-200%, -50%) scale(1.02);
 }
 
 /* DECORATIVE CIRCLE */
